@@ -1,48 +1,40 @@
 import { Link } from "react-router-dom";
 import routes from "../routes";
+import { useState } from "react";
+import "./Header.css";
 
 const Header = () => {
+  const [isActve, setIsActive] = useState(false);
+
+  const toggleClass = () => {
+    setIsActive(!isActve);
+  };
+
   return (
-    <div>
-      <span>LOGO</span>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/how-it-works">How it works</Link>
-          </li>
-          <li>
-            <Link to="/courses">Courses</Link>
-          </li>
-          <li>
-            <Link to="/tuition">Tuition</Link>
-          </li>
-          <li>
-            <Link to="/partners">Partners</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/careers">Careers</Link>
-          </li>
-          <li>
-            <Link to="/faq">FAQ</Link>
-          </li>
-          <li>
-            <Link to="/sign-in">Sign-in</Link>
-          </li>
-          <li>
-            <Link to="/apply-now">Apply now</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <>
+      <header id="main-header">
+        <Link to="/" id="home-logo">
+          <img src="/kodego-large.svg" alt="" id="home-logo-image" />
+        </Link>
+        <div>
+          <button onClick={toggleClass} id="nav-button">
+            {isActve ? <span>X</span> : <span>|||</span>}
+          </button>
+          <ul id="nav-links-container" className={isActve ? "show" : "hidden"}>
+            {routes.map((route, index) => {
+              if (index === 0) {
+                return null;
+              }
+              return (
+                <li key={index + 1} className="nav-link">
+                  <Link to={route.path}>{route.name}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </header>
+    </>
   );
 };
 

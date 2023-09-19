@@ -1,0 +1,11 @@
+#about {
+  background-image: url(/Frame2.About.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#about-main-text-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}

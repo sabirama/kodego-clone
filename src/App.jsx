@@ -9,7 +9,6 @@ function App() {
       <Header />
       <Routes>
         {routes.map((route, index) => {
-          console.log(index);
           return (
             <Route
               key={index}

@@ -17,10 +17,30 @@ const routes = [
     element: <Home />,
   },
   {
+    name: "About Us",
     path: "/about",
     element: <About />,
   },
-
+  {
+    name: "How it works",
+    path: "/how-it-works",
+    element: <HowItWorks />,
+  },
+  {
+    name: "Courses",
+    path: "/courses",
+    element: <Courses />,
+  },
+  {
+    name: "Tuition",
+    path: "/tuition",
+    element: <Tuition />,
+  },
+  {
+    name: "Partners",
+    path: "/partners",
+    element: <Partners />,
+  },
   {
     name: "Blog",
     path: "/blog",
@@ -32,29 +52,9 @@ const routes = [
     element: <Careers />,
   },
   {
-    name: "Courses",
-    path: "/courses",
-    element: <Courses />,
-  },
-  {
     name: "FAQ",
     path: "/faq",
     element: <Faq />,
-  },
-  {
-    name: "How it works",
-    path: "/how-it-works",
-    element: <HowItWorks />,
-  },
-  {
-    name: "About",
-    path: "/about",
-    element: <ApplyNow />,
-  },
-  {
-    name: "Partners",
-    path: "/partners",
-    element: <Partners />,
   },
   {
     name: "Sign-In",
@@ -62,9 +62,9 @@ const routes = [
     element: <SignIn />,
   },
   {
-    name: "Tuition",
-    path: "/tuition",
-    element: <Tuition />,
+    name: "Apply now",
+    path: "/apply-now",
+    element: <ApplyNow />,
   },
 ];
 

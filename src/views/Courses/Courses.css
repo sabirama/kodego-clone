@@ -1,0 +1,9 @@
+.courses-learn-more-button {
+  justify-self: right;
+}
+
+#courses-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
